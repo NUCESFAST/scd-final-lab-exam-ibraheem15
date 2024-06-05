@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 1102-backend-auth-deployment
+  name: i211102-backend-auth-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: 1102-auth-backend
+      app: i211102-auth-backend
   template:
     metadata:
       labels:
-        app: 1102-auth-backend
+        app: i211102-auth-backend
     spec:
       containers:
-      - name: 1102-auth-backend
+      - name: i211102-auth-backend
         image: ibraheem15/auth:latest
         ports:
         - containerPort: 3102

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 1102-backend-post-deployment
+  name: i211102-backend-post-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: 1102-post-backend
+      app: i211102-post-backend
   template:
     metadata:
       labels:
-        app: 1102-post-backend
+        app: i211102-post-backend
     spec:
       containers:
-      - name: 1102-post-backend
+      - name: i211102-post-backend
         image: ibraheem15/post:latest
         ports:
         - containerPort: 3102

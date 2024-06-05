@@ -29,7 +29,7 @@ pipeline {
           def services = ['Auth', 'Classrooms', 'client', 'event-bus', 'Post']
           docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             for (service in services) {
-              docker.image("your-dockerhub-username/${service}").push("latest")
+              docker.image("ibraheem15/${service}").push("latest")
             }
           }
         }

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ibraheem15/client:frontend
+        image: ibraheem15/client:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 1102

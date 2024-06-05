@@ -1,13 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 1102-event-bus-backend-service
+  name: i211102-post-backend-service
 spec:
   selector:
-    app: 1102-event-bus-backend
+    app: i211102-post-backend
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3102
-      nodePort: 30000
   type: NodePort
