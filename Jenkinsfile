@@ -14,6 +14,7 @@ pipeline {
           def services = ['Auth', 'Classrooms', 'client', 'event-bus', 'Post']
           for (service in services) {
             dir(service) {
+              sh 'npm --version'
               sh 'npm install'
               sh 'docker build -t your-dockerhub-username/${service} .' 
             }

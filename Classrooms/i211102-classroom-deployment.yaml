@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 1102-backend-classroom-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 1102-classroom-backend
+  template:
+    metadata:
+      labels:
+        app: 1102-classroom-backend
+    spec:
+      containers:
+      - name: 1102-classroom-backend
+        image: ibraheem15/classroom:latest
+        ports:
+        - containerPort: 3103
+        env:
+        - name: PORT
+          value: "3103"
